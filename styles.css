@@ -5,6 +5,17 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper ensures footer stays at bottom */
+.wrapper {
+    flex: 1; /* This ensures the main content stretches to take up available space */
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -135,3 +146,115 @@ p {
 .dark-blue:hover {
     opacity: 0.8;
 }
+
+.toggle-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.toggle-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, white, #f0f4ff);
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tabs button.active {
+    background: #0099FF;
+    color: white;
+    font-weight: bold;
+}
+
+.tabs button:hover {
+    background: #007bff;
+    color: white;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0099FF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #007bff;
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    padding: 40px;
+    background-color: #f0f4ff;
+    color: #007bff;
+}
+
+.story-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.story-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    width: 60%;
+}
+
+/* Footer at bottom with scrollable page */
+footer {
+    background

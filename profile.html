@@ -7,35 +7,56 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
+<header>
+    <div class="logo">
+        <img src="STLBAC_Logo2.webp" alt="Community Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="connect.html">Connect</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+    <div class="buttons">
+        <a href="donate.html"><button class="donate">Donate</button></a>
+        <a href="profile.html"><button class="join">Join Today</button></a>
+    </div>
+</header>
 <body>
 
     <div class="container">
         <div class="form-container">
+            <!-- Tab Navigation -->
             <div class="tabs">
                 <button id="login-tab" class="active" onclick="showLogin()">Log In</button>
                 <button id="signup-tab" onclick="showSignup()">Sign Up</button>
             </div>
 
-            <!-- Log In -->
-            <form id="login-form">
+            <!-- Log In Form -->
+            <form id="login-form" class="form">
                 <h2>Log In</h2>
                 <input type="email" id="login-email" placeholder="Email" required>
                 <input type="password" id="login-password" placeholder="Password" required>
-                <button type="submit">Log In</button>
+                <button type="submit" class="submit-btn">Log In</button>
                 <p class="toggle-text">Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
             </form>
 
-            <!-- Sign Up -->
-            <form id="signup-form" style="display: none;">
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="form" style="display: none;">
                 <h2>Sign Up</h2>
                 <input type="text" id="signup-name" placeholder="Full Name" required>
                 <input type="email" id="signup-email" placeholder="Email" required>
                 <input type="password" id="signup-password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
+                <button type="submit" class="submit-btn">Sign Up</button>
                 <p class="toggle-text">Already have an account? <a href="#" onclick="showLogin()">Log In</a></p>
             </form>
         </div>
     </div>
-
+    <footer>
+        <p>&copy; 2024 STLBAC. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -5,7 +5,15 @@ html, body {
 }
 
 .wrapper {
-    flex: 1;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1 1 auto;
+    overflow: auto;
+    padding-bottom: 100px;
 }
 
 header {
@@ -456,12 +464,13 @@ form {
 
 /* Our Story */
 .story-container {
+    min-height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 60vh;
+    height: 80vh;
     padding: 40px;
     background-color: #f0f4ff;
     color: #007bff;
@@ -477,3 +486,4 @@ form {
     line-height: 1.6;
     width: 60%;
 }
+

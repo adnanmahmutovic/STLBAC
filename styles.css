@@ -705,40 +705,97 @@ form {
     width: auto;
 }
 
-/* event details */
+/* --- The overlay & modal container --- */
 .modal {
-    display: none; /* Hide modal by default */
-    position: fixed;
-    z-index: 1000; /* Sit on top */
+    display: none;              /* Hidden by default; shown via JS */
+    position: fixed;            /* Stay in place */
+    z-index: 9999;             /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    width: 100%;                /* Full width */
+    height: 100%;               /* Full height */
+    background: rgba(0, 0, 0, 0.6); /* Black background w/ opacity */
+    overflow: auto;             /* Enable scroll if needed */
   }
   
-  /* Modal Content */
+  /* --- The modal content box --- */
   .modal-content {
+    position: relative;
     background-color: #fff;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 10% auto;     /* 10% from the top, centered horizontally */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Adjust width as needed */
+    border-radius: 6px;
+    max-width: 600px;     /* Max width of the popup box */
+    width: 90%;           /* Adapt to small screens */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
   
-  /* Close Button */
-  .close {
+  /* --- The close button (top-right corner) --- */
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
     color: #aaa;
-    float: right;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
   }
   
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+  .close-modal:hover {
+    color: #000;
+  }
+  
+  /* Additional styling for modal text */
+  #modalTitle {
+    margin-top: 0; /* remove extra space for first heading */
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #modalDate, #modalTime, #modalLocation {
+    margin: 0.5rem 0;
+  }
+
+
+
+
+  /* Connects background overlay */
+  /* Modal background overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Modal content box */
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Close icon */
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
     cursor: pointer;
+  }
+  
+  .close-modal:hover {
+    color: #000;
   }
   

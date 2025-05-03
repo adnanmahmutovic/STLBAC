@@ -1,11 +1,9 @@
 <?php
-// register.php
 
-// Database connection
 $host = 'localhost';
 $dbname = 'stlbac';
 $username = 'root';
-$password = 'root'; // default for MAMP
+$password = 'root';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
@@ -14,7 +12,6 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = trim($_POST["username"]);
     $email = trim($_POST["email"]);
@@ -32,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 ':email' => $email,
                 ':password' => $hashed_password
             ]);
-            // Redirect after successful registration
             header("Location: welcome.php?user=" . urlencode($user));
             exit;
 

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("eventModal");
   const closeBtn = document.querySelector(".close-modal");
 
-  // References to modal content elements
   const modalTitle = document.getElementById("modalTitle");
   const modalDate = document.getElementById("modalDate");
   const modalTime = document.getElementById("modalTime");
@@ -23,15 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
       const speakers = btn.getAttribute("data-speakers");
       const extras = btn.getAttribute("data-extras");
 
-      // Populate modal basic fields
+
       modalTitle.textContent = title;
       modalDate.textContent = `Date: ${date}`;
       modalTime.textContent = `Time: ${time}`;
       modalLocation.textContent = `Location: ${location}`;
       modalAddress.textContent = `Address: ${address}`;
 
-
-      // Build speakers list
       const speakerList = speakers
         .split(',')
         .map(name => `<li>${name.trim()}</li>`)
@@ -41,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <ul>${speakerList}</ul>
       `;
 
-      // Build extras list
       const extrasList = extras
         .split(',')
         .map(item => `<li>${item.trim()}</li>`)
@@ -51,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <ul>${extrasList}</ul>
       `;
 
-      // Combine all content
       modalDescription.innerHTML = `
         ${speakersHTML}
         ${extrasHTML}
@@ -59,12 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>${description}</p>
       `;
 
-      // Show the modal
       modal.style.display = "block";
     });
   });
 
-  // Modal close behavior
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });

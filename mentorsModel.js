@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
       mentorName.textContent = name;
       mentorExpertise.textContent = `Expertise: ${expertise}`;
 
-      // Format education and occupation as bullet lists
       const educationList = education
         .split('|')
         .map(item => `<li>${item.trim()}</li>`)
@@ -50,10 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Message Modal functionality
 const messageModal = document.getElementById("messageModal");
 const closeMsgBtn = document.querySelector(".close-message-modal");
-const messageBtns = document.querySelectorAll(".rsvp-btn"); // Target "Message" buttons
+const messageBtns = document.querySelectorAll(".rsvp-btn");
 
 messageBtns.forEach((btn) => {
   btn.addEventListener("click", () => {

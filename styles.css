@@ -185,7 +185,6 @@ p {
 }
 
 /* profile.html login and register page */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -501,7 +500,6 @@ form {
     background: #f5f5f5;
   }
 
-  /* Navigation (example) */
   nav {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -521,14 +519,12 @@ form {
     font-weight: 500;
   }
 
-  /* Page title styling */
   h1 {
     text-align: center;
     margin: 2rem 0 1rem;
     color: #333;
   }
 
-  /* Container to hold all event cards */
   .events-container {
     display: flex;
     flex-wrap: wrap;
@@ -537,7 +533,6 @@ form {
     padding: 2rem;
   }
 
-  /* Individual event card styling */
   .event-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -558,13 +553,11 @@ form {
     color: #555;
   }
 
-  /* Button container */
   .event-buttons {
     display: flex;
     justify-content: space-between;
   }
 
-  /* Buttons */
   .event-buttons button {
     padding: 0.5rem 1rem;
     border: none;
@@ -583,7 +576,6 @@ form {
     color: #fff;
   }
 
-  /* Hover effects (optional) */
   .details-btn:hover {
     background-color: #002D62;
   }
@@ -609,7 +601,6 @@ form {
     background: #f5f5f5;
   }
 
-  /* Navigation (example) */
   nav {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -629,14 +620,12 @@ form {
     font-weight: 500;
   }
 
-  /* Page title styling */
   h1 {
     text-align: center;
     margin: 2rem 0 1rem;
     color: #333;
   }
 
-  /* Container to hold all event cards */
   .events-container {
     display: flex;
     flex-wrap: wrap;
@@ -645,7 +634,6 @@ form {
     padding: 2rem;
   }
 
-  /* Individual event card styling */
   .event-card {
     background: #fff;
     border: 1px solid #ddd;
@@ -666,13 +654,11 @@ form {
     color: #555;
   }
 
-  /* Button container */
   .event-buttons {
     display: flex;
     justify-content: space-between;
   }
 
-  /* Buttons */
   .event-buttons button {
     padding: 0.5rem 1rem;
     border: none;
@@ -691,7 +677,6 @@ form {
     color: #fff;
   }
 
-  /* Hover effects (optional) */
   .details-btn:hover {
     background-color: #002D62;
   }
@@ -705,32 +690,29 @@ form {
     width: auto;
 }
 
-/* --- The overlay & modal container --- */
 .modal {
-    display: none;              /* Hidden by default; shown via JS */
-    position: fixed;            /* Stay in place */
-    z-index: 9999;             /* Sit on top */
+    display: none;           
+    position: fixed;          
+    z-index: 9999;          
     left: 0;
     top: 0;
-    width: 100%;                /* Full width */
-    height: 100%;               /* Full height */
-    background: rgba(0, 0, 0, 0.6); /* Black background w/ opacity */
-    overflow: auto;             /* Enable scroll if needed */
+    width: 100%;           
+    height: 100%;              
+    background: rgba(0, 0, 0, 0.6); 
+    overflow: auto;
   }
-  
-  /* --- The modal content box --- */
+
   .modal-content {
     position: relative;
     background-color: #fff;
-    margin: 10% auto;     /* 10% from the top, centered horizontally */
+    margin: 10% auto; 
     padding: 20px;
     border-radius: 6px;
-    max-width: 600px;     /* Max width of the popup box */
-    width: 90%;           /* Adapt to small screens */
+    max-width: 600px; 
+    width: 90%; 
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   }
-  
-  /* --- The close button (top-right corner) --- */
+
   .close-modal {
     position: absolute;
     top: 10px;
@@ -745,9 +727,8 @@ form {
     color: #000;
   }
   
-  /* Additional styling for modal text */
   #modalTitle {
-    margin-top: 0; /* remove extra space for first heading */
+    margin-top: 0;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
@@ -756,11 +737,6 @@ form {
     margin: 0.5rem 0;
   }
 
-
-
-
-  /* Connects background overlay */
-  /* Modal background overlay */
 .modal {
     display: none;
     position: fixed;
@@ -784,7 +760,6 @@ form {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
   
-  /* Close icon */
   .close-modal {
     position: absolute;
     top: 10px;
@@ -812,7 +787,7 @@ form {
   }
   
   .hero-image img {
-    width: 500px;       /* Resize image */
+    width: 500px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -836,8 +811,12 @@ form {
 
   .profile-header {
     background-color: #f5f5f5;
-    padding: 60px 20px 30px; /* increased top padding */
+    padding: 60px 20px 30px;
     text-align: center;
-    margin-top: 60px; /* pushes it down to prevent overlap */
+    margin-top: 60px;
   }
   
+  .toggle-panel h1,
+  .toggle-panel p {
+    color: #fff;
+}

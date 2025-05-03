@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     print_r($_POST);
     echo "</pre>";
 
-    // Database config
     $host = 'localhost';
     $dbname = 'stlbac';
     $username = 'root';

@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>St. Louis Balkan American Connection</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <title>Donate - STLBAC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .donation-box {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .donation-box h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .preset-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .preset-amount {
+      background-color: #0099FF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .preset-amount:hover {
+      background-color: #007acc;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background-color: #002D62;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1.5rem;
+      transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #004080;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .close-modal {
+      float: right;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Header -->
     <header>
         <div class="logo">
             <img src="STLBAC_Logo2.webp" alt="Community Logo">
@@ -28,3 +123,76 @@
             <a href="profile.html"><button class="join">Join Today</button></a>
         </div>
     </header>
+
+  <!-- Donation Form -->
+  <div class="donation-box">
+    <h2>Make a Donation</h2>
+    <form id="donateForm">
+      <div class="preset-buttons">
+        <button type="button" class="preset-amount" data-amount="10">$10</button>
+        <button type="button" class="preset-amount" data-amount="50">$50</button>
+        <button type="button" class="preset-amount" data-amount="100">$100</button>
+      </div>
+
+      <label for="customAmount">Or enter a custom amount</label>
+      <input type="number" id="customAmount" placeholder="$0.00" />
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your name" required />
+
+      <label for="card">Credit Card Number</label>
+      <input type="text" id="card" placeholder="1234 5678 9012 3456" required />
+
+      <label for="exp">Expiration Date</label>
+      <input type="text" id="exp" placeholder="MM/YY" required />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" required />
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="donationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Thank You!</h2>
+      <p>Your donation has been received. We sincerely appreciate your support!</p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const donateBtn = document.querySelector("#donateForm button[type='submit']");
+      const modal = document.getElementById("donationModal");
+      const closeBtn = modal.querySelector(".close-modal");
+      const presetButtons = document.querySelectorAll(".preset-amount");
+      const customAmountInput = document.getElementById("customAmount");
+
+      presetButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const amount = btn.getAttribute("data-amount");
+          customAmountInput.value = amount;
+        });
+      });
+
+      donateBtn.addEventListener("click", (e) => {
+        e.preventDefault(); // Prevent real form submission
+        modal.style.display = "block";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

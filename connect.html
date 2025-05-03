@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-      <!-- Header -->
       <header>
         <div class="logo">
             <img src="STLBAC_Logo2.webp" alt="Community Logo">
@@ -32,18 +31,20 @@
     <!-- Mentor Card 1 -->
     <div class="event-card">
       <img src="Vedada.webp" alt="Mentor 1">
-      <h2>Vedada Becirovic</h2>
+      <h2><a href="vedada.html">Dr. Vedada Becirovic</a></h2>
       <p>Expertise: Higher Education</p>
       <div class="event-buttons">
-        <!-- Pass unique data via attributes -->
         <button
-          class="details-btn"
-          data-name="Vedada Becirovic"
-          data-expertise="Higher Education"
-          data-bio="Vedada has extensive experience in guiding students to thrive in higher education..."
+        class="details-btn"
+        data-name="Dr. Vedada Becirovic"
+        data-expertise="Higher Education"
+        data-education="Webster University - Bachelors of Science (BS), Biology | Saint Louis University - Masters of Science (MS), Analytical Chemistry | Maryville University - Doctorate of Education (EdD),  Higher Educational Leadership"
+        data-occupation="Science Lab Manager - Maryville University | Adjunct Faculty - Maryville University | Board Member - St. Louis Balkan American Connection"
+        data-bio="&lt;p&gt;Vedada Becirovic is a dedicated educator with a lifelong passion for science and student development. She earned a Bachelors of Science in Biology from Webster University, followed by a Masters of Science in Analytical Chemistry from Saint Louis University. She later completed her Doctorate of Education in Higher Educational Leadership at Maryville University.&lt;/p&gt;&lt;p&gt;Vedada currently serves as a Science Lab Manager and Adjunct Faculty at Maryville University, where she actively mentors students and supports hands-on scientific education. Her commitment to higher education is evident through her leadership and support roles in academic settings.&lt;/p&gt;&lt;p&gt;As a mentor with STLBAC, Vedada is passionate about empowering young professionals and first-generation college students to succeed in their academic and career journeys.&lt;/p&gt;"
         >
-          Details
-        </button>
+        Details
+      </button>
+
         <button class="rsvp-btn">Message</button>
       </div>
     </div>
@@ -51,41 +52,69 @@
     <!-- Mentor Card 2 -->
     <div class="event-card">
       <img src="AminaSelimovic.webp" alt="Mentor 2">
-      <h2>Amina Selimovic</h2>
+      <h2><a href="amina.html">Amina Selimovic</a></h2>
       <p>Expertise: Nuclear Medicine Technology</p>
       <div class="event-buttons">
-        <!-- Different data for this mentor -->
         <button
           class="details-btn"
           data-name="Amina Selimovic"
           data-expertise="Nuclear Medicine Technology"
-          data-bio="Amina specializes in nuclear medicine and has a passion for teaching and mentoring..."
-        >
-          Details
+          data-education="Saint Louis University - Bachelors of Science (BS), Nuclear Medicine Technology | Webster University - Masters of Science (MS), Healthcare Administration"
+          data-occupation="Saint Louis Balkan American Connections - Founder"
+          data-bio="&lt;p&gt;Amina Selimovic is a passionate advocate for education and community empowerment with deep expertise in Nuclear Medicine Technology. She holds a Bachelor of Science in Nuclear Medicine Technology from Saint Louis University and a Master of Science in Healthcare Administration from Webster University.&lt;/p&gt;&lt;p&gt;Amina spent 13 years at BJC HealthCare, where she served in leadership roles including Radiology Program Manager and Interim Assistant Director of Laboratory Services, overseeing critical clinical operations and mentoring medical professionals. Her experience in the healthcare system shaped her commitment to mentorship and access.&lt;/p&gt;&lt;p&gt;Motivated by her professional journey and dedication to her roots, Amina founded the St. Louis Balkan American Connection (STLBAC) to help bridge gaps in opportunity, education, and community engagement for Balkan Americans in the region.&lt;/p&gt;"
+          >
+         Details
         </button>
         <button class="rsvp-btn">Message</button>
       </div>
     </div>
-
-    <!-- Add more mentor cards as needed... -->
-
   </div>
 
-  <!-- Single Modal for Mentor Details -->
+  <!-- Mentor Details -->
   <div id="mentorModal" class="modal">
     <div class="modal-content">
-      <!-- Close button -->
       <span class="close-modal">&times;</span>
-      
-      <!-- Elements we will populate dynamically -->
       <h2 id="mentorName"></h2>
       <p id="mentorExpertise"></p>
+      <div id="mentorEducation"></div>
+      <div id="mentorOccupation"></div>
       <hr>
       <p id="mentorBio"></p>
     </div>
   </div>
+  
+  <!-- Message -->
+<div id="messageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-message-modal" style="float: right; font-size: 1.5rem; cursor: pointer;">&times;</span>
+    <h2>Send a Message</h2>
+    <form id="messageForm">
+      <div>
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 8px;">
+      </div>
+      <br>
+      <div>
+        <label for="messageBody">Message:</label><br>
+        <textarea id="messageBody" name="messageBody" rows="5" required style="width: 100%; padding: 8px;"></textarea>
+      </div>
+      <br>
+      <button type="submit" style="background-color: #002D62; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">
+        Send
+      </button>
+    </form>
+  </div>
+</div>
 
-  <!-- JavaScript that controls the modal for mentors -->
+<!-- Message Confirmation -->
+<div id="messageConfirmModal" class="modal">
+  <div class="modal-content">
+    <span class="close-confirm-modal" style="float: right; font-size: 1.5rem; cursor: pointer;">&times;</span>
+    <h2>Message Sent</h2>
+    <p>Your message has been sent successfully. The mentor will get back to you shortly.</p>
+  </div>
+</div>
+
   <script src="mentorsModel.js"></script>
 </body>
 </html>

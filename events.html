@@ -28,30 +28,32 @@
   <h1>Upcoming Events</h1>
 
   <div class="events-container">
-    <!-- Example Event Card 1 -->
+    <!-- Event Card 1 -->
     <div class="event-card">
       <img src="connections1.webp" alt="Community Connections">
       <h2>Community Connections</h2>
       <p>Date: February 27, 2025</p>
       <p>Time: 6:30PM - 8:00PM</p>
-      <p>Location: Meramec Valley Library</p>
+      <p>Location: Grbic Restaurant and Private Events</p>
       <div class="event-buttons">
-        <!-- Pass event details as data attributes -->
         <button 
-          class="details-btn" 
-          data-title="Community Connections"
-          data-date="February 27, 2025"
-          data-time="6:30PM - 8:00PM"
-          data-location="Meramec Valley Library"
-          data-description="This event focuses on building stronger ties... (Add more details here!)."
-        >
-          Details
+        class="details-btn" 
+        data-title="Community Connections"
+        data-date="May 31, 2025"
+        data-time="6:30PM - 8:00PM"
+        data-location="Grbic Retaurant and Private Events"
+        data-address="4071 Keokuk St, St. Louis, MO 63116"
+        data-description="This event focuses on building stronger ties within the community."
+        data-speakers="Vedada Becirovic, Amina Selimovic, Leila Delic"
+        data-extras="Sponsored Dinner, Live Music, Open Networking, Activities for all ages"
+      >
+        Details
         </button>
         <button class="rsvp-btn">RSVP</button>
       </div>
     </div>
 
-    <!-- Example Event Card 2 -->
+    <!-- Event Card 2 -->
     <div class="event-card">
       <img src="panel_discussion.webp" alt="Panel Discussion - STEM">
       <h2>Panel Discussion - STEM</h2>
@@ -60,13 +62,16 @@
       <p>Location: Meramec Valley Library</p>
       <div class="event-buttons">
         <button 
-          class="details-btn"
-          data-title="Panel Discussion - STEM"
-          data-date="November 14, 2024"
-          data-time="6:30PM - 7:30PM"
-          data-location="Meramec Valley Library"
-          data-description="Join us for a panel discussion about STEM opportunities... (Add more details here!)."
-        >
+        class="details-btn"
+        data-title="Panel Discussion - STEM"
+        data-date="May 10, 2025"
+        data-time="6:30PM - 7:30PM"
+        data-location="Meramec Valley Library"
+        data-address="1501 San Simeon Way, Fenton, MO 63026"
+        data-description="Join us for a panel discussion about STEM opportunities in the region."
+        data-speakers="Adnan Mahmutovic, Minea Dervisevic, Irma Kalendar, Danny Nusinovic"
+        data-extras="Networking hour, STEM resources, Free snacks, Q&A session"
+      >
           Details
         </button>
         <button class="rsvp-btn">RSVP</button>
@@ -87,8 +92,18 @@
       <p id="modalDate">Date: ...</p>
       <p id="modalTime">Time: ...</p>
       <p id="modalLocation">Location: ...</p>
+      <p id="modalAddress">Address: ...</p>
       <hr>
       <p id="modalDescription">More event details will go here...</p>
+    </div>
+  </div>
+
+  <!-- RSVP Confirmation Modal -->
+  <div id="rsvpModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal close-rsvp">&times;</span>
+      <h2>RSVP Confirmed</h2>
+      <p>You have been confirmed for this event. We look forward to seeing you there!</p>
     </div>
   </div>
 
